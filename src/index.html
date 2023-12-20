@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Generador de excusas</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -14,12 +14,41 @@
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
+      <h1 class="mt-5">GENERADOR DE EXCUSAS</h1>
       <img src="./rigo-baby.jpg" />
       <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
+        Hoy <b> no </b> podré salir de <b>fiesta</b>,porque:
       </p>
+      <p id="excusa">
+        <script>
+          let excusas = [
+            "Mi mujer tiene guardia y me tengo que quedar con los niños.",
+            "Hace mucho frío.",
+            "Tengo que acabar el prework.",
+            "El coche no me arranca.",
+            "Se ha estrellado un ovni en el jardín.",
+            "Ya he salido 5 días seguidos.",
+            "Está lloviendo y se me ha inundado la casa.",
+            "El perro no me deja salir.",
+            "Tengo bolo en Rusia.",
+            "Tengo que regar las plantas."
+          ];
+
+          function obtenerExcusaAleatoria() {
+            let indice = Math.floor(Math.random() * excusas.length);
+            return excusas[indice];
+          }
+          document.getElementById(
+            "excusa"
+          ).textContent = obtenerExcusaAleatoria();
+          window.onload = function() {
+            document.getElementById(
+              "excusa"
+            ).textContent = obtenerExcusaAleatoria();
+          };
+        </script>
+      </p>
+
       <div class="fixed-bottom p-4">
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
