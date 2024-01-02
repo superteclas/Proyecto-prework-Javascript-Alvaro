@@ -19,35 +19,7 @@
       <p class="alert alert-warning mt-4">
         Hoy <b> no </b> podré salir de <b>fiesta</b>,porque:
       </p>
-      <p id="excusa">
-        <script>
-          let excusas = [
-            "Mi mujer tiene guardia y me tengo que quedar con los niños.",
-            "Hace mucho frío.",
-            "Tengo que acabar el prework.",
-            "El coche no me arranca.",
-            "Se ha estrellado un ovni en el jardín.",
-            "Ya he salido 5 días seguidos.",
-            "Está lloviendo y se me ha inundado la casa.",
-            "El perro no me deja salir.",
-            "Tengo bolo en Rusia.",
-            "Tengo que regar las plantas."
-          ];
-
-          function obtenerExcusaAleatoria() {
-            let indice = Math.floor(Math.random() * excusas.length);
-            return excusas[indice];
-          }
-          document.getElementById(
-            "excusa"
-          ).textContent = obtenerExcusaAleatoria();
-          window.onload = function() {
-            document.getElementById(
-              "excusa"
-            ).textContent = obtenerExcusaAleatoria();
-          };
-        </script>
-      </p>
+      <p id="excusa"></p>
 
       <div class="fixed-bottom p-4">
         Made with ❤️ by
